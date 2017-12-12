@@ -25,6 +25,10 @@
 /* Begin PBXFileReference section */
 		0ACF7EA61FE00A89001EDF11 /* COM2038_Coursework */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = COM2038_Coursework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ACF7EA91FE00A89001EDF11 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		0ACF7EB01FE00AF1001EDF11 /* Animal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
+		0ACF7EB11FE00B0B001EDF11 /* Cat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cat.h; sourceTree = "<group>"; };
+		0ACF7EB21FE00B15001EDF11 /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
+		0ACF7EB31FE00B20001EDF11 /* Horse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Horse.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,10 @@
 			isa = PBXGroup;
 			children = (
 				0ACF7EA91FE00A89001EDF11 /* main.cpp */,
+				0ACF7EB01FE00AF1001EDF11 /* Animal.h */,
+				0ACF7EB11FE00B0B001EDF11 /* Cat.h */,
+				0ACF7EB21FE00B15001EDF11 /* Dog.h */,
+				0ACF7EB31FE00B20001EDF11 /* Horse.h */,
 			);
 			path = COM2038_Coursework;
 			sourceTree = "<group>";

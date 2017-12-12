@@ -1,15 +1,13 @@
 //
-//  main.cpp
+//  Horse.h
 //  COM2038_Coursework
 //
 //  Created by Marc Stevens on 12/12/2017.
 //  Copyright © 2017 Marc Stevens. All rights reserved.
 //
 
-#include <iostream>
+#ifndef Horse_h
+#define Horse_h
 
-int main() {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
-}
+
+#endif /* Horse_h */
