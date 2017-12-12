@@ -6,8 +6,17 @@
 //  Copyright © 2017 Marc Stevens. All rights reserved.
 //
 
-#ifndef Horse_h
-#define Horse_h
-
-
-#endif /* Horse_h */
+using namespace std;
+#include <string>
+class Horse : public Animal{
+protected:
+    string earType;
+    string tailColour;
+    Horse* dad;
+    Horse* mom;
+public:
+    Horse(string name, string breed, string colour, string height,
+        string earType, string tailColour, Horse* dad, Horse* mom){}
+    ~Horse();
+    
+};

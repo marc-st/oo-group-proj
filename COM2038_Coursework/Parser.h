@@ -19,4 +19,3 @@ protected:
     // dog list
     // horse list
 };
-

@@ -41,7 +41,6 @@ void Parser::readFile(string filename){
             }else{
                 
             }
-            
             while(getline(row, item, ',')){
                 
             }

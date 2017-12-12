@@ -6,8 +6,17 @@
 //  Copyright © 2017 Marc Stevens. All rights reserved.
 //
 
-#ifndef Cat_h
-#define Cat_h
-
-
-#endif /* Cat_h */
+using namespace std;
+#include <string>
+class Cat : public Animal{
+protected:
+    string earType;
+    string tailColour;
+    Cat* dad;
+    Cat* mom;
+public:
+    Cat(string name, string breed, string colour, string height,
+        string earType, string tailColour, Cat* dad, Cat* mom){}
+    ~Cat();
+    
+};
