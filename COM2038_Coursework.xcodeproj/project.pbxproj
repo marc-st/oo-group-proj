@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0ACF7EAA1FE00A89001EDF11 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF7EA91FE00A89001EDF11 /* main.cpp */; };
+		0ACF7EB61FE00E94001EDF11 /* parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF7EB51FE00E94001EDF11 /* parser.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,8 @@
 		0ACF7EB11FE00B0B001EDF11 /* Cat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cat.h; sourceTree = "<group>"; };
 		0ACF7EB21FE00B15001EDF11 /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
 		0ACF7EB31FE00B20001EDF11 /* Horse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Horse.h; sourceTree = "<group>"; };
+		0ACF7EB41FE00D6C001EDF11 /* Parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
+		0ACF7EB51FE00E94001EDF11 /* parser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = parser.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,8 @@
 				0ACF7EB11FE00B0B001EDF11 /* Cat.h */,
 				0ACF7EB21FE00B15001EDF11 /* Dog.h */,
 				0ACF7EB31FE00B20001EDF11 /* Horse.h */,
+				0ACF7EB41FE00D6C001EDF11 /* Parser.h */,
+				0ACF7EB51FE00E94001EDF11 /* parser.cpp */,
 			);
 			path = COM2038_Coursework;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ACF7EB61FE00E94001EDF11 /* parser.cpp in Sources */,
 				0ACF7EAA1FE00A89001EDF11 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
