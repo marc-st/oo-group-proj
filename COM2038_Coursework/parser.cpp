@@ -14,9 +14,8 @@
 #include <vector>
 #include <iostream>
 
-#include <Cat.h>
-#include <Dog.h>
-#include <Horse.h>
+#include "Dog.h"
+#include "Horse.h"
 
 //Parser::Parser(){}
 
@@ -29,40 +28,64 @@ void Parser::readFile(string filename){
     if (!infile.is_open())
         perror("error while opening file");
 
-    while(infile){
+    if(infile){
         
         string str;
         
         while(!infile.eof()){
             
             infile >> str;
-            stringstream row(str); string item; std::vector<string> items;
+            stringstream row(str); string item; std::vector<string> items(8);
+            
+            std::fill(items.begin(), items.end(), "N/A");
+            
+            int index = 0;
             
             while(getline(row, item, ',')){
-                items.push_back(item);
+                if(index == items.size()) break;
+                if(!(item.empty())) items.at(index++) = item;
             }
             
-            for (auto i: items){
-                cout << i << ' ' ;
-            }
-            cout << "end of item!" << endl;
-
-            
-            // make Cat/Dog/Horse object
             string animalType = filename.substr(0, filename.length()-1);
+            
             if(animalType == "Cats"){
-               Cat cat(items.at(0), items.at(1), items.at(2), items.at(3), items.at(4), items.at(5), items.at(6), items.at(7));
+                
+                Cat* mum = nullptr;
+                Cat* dad = nullptr;
+                
+                if(items.at(7) != "N/A") mum = cats.getParent(items.at(6));
+                if(items.at(8) != "N/A") dad = cats.getParent(items.at(7));
+                    
+                Cat cat(items.at(0), items.at(1), items.at(2), items.at(3), items.at(4), items.at(5), mum, dad);
+                cats.add(cat);
+                
             }else if(animalType == "Dogs"){
-                Dog dog(items.at(0), items.at(1), items.at(2), items.at(3), items.at(4), items.at(5), items.at(6), items.at(7));
+                
+                Dog* mum = nullptr;
+                Dog* dad = nullptr;
+                
+                if(items.at(7) != "N/A") mum = dogs.getParent(items.at(6));
+                if(items.at(8) != "N/A") dad = dogs.getParent(items.at(7));
+                
+                Dog dog(items.at(0), items.at(1), items.at(2), items.at(3), items.at(4), items.at(5), mum, dad);
+                dogs.add(dog);
+                
             }else if(animalType == "Horses"){
-                Horse horse(items.at(0), items.at(1), items.at(2), items.at(3), items.at(4), items.at(5), items.at(6), items.at(7));
+                
+                Horse* mum = nullptr;
+                Horse* dad = nullptr;
+                
+                if(items.at(7) != "N/A") mum = horses.getParent(items.at(6));
+                if(items.at(8) != "N/A") dad = horses.getParent(items.at(7));
+                
+                Horse horse(items.at(0), items.at(1), items.at(2), items.at(3), items.at(4), items.at(5), mum, dad);
+                horses.add(horse);
+                
             }else{
+                throw "Invalid File Name";
             }
             
-            // add object to respective Array/List
+            // add object to respective vector
         }
     }
 }
-
-
-

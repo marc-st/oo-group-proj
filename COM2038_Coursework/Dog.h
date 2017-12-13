@@ -6,8 +6,14 @@
 //  Copyright © 2017 Marc Stevens. All rights reserved.
 //
 
-using namespace std;
+#ifndef DOG_H
+#define DOG_H
+
 #include <string>
+using namespace std;
+
+#include "Animal.h"
+
 class Dog : public Animal{
 protected:
     string earType;
@@ -20,6 +26,6 @@ public:
     :
     Animal(name, breed, colour, height), earType(earType), tailColour(tailColour),
     dad(dad), mom(mom){}
-    ~Dog();
-    
 };
+
+#endif /* DOG_H */

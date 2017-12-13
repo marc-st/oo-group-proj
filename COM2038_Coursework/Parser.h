@@ -6,6 +6,11 @@
 //  Copyright © 2017 Marc Stevens. All rights reserved.
 //
 
+#include "Dog.h"
+#include "Cat.h"
+#include "Horse.h"
+#include "AnimalList.h"
+
 #include <string>
 using namespace std;
 
@@ -15,7 +20,7 @@ public:
     //~Parser();
     void readFile(string file);
 protected:
-    // cat list
-    // dog list
-    // horse list
+    AnimalList<Dog> dogs;
+    AnimalList<Cat> cats;
+    AnimalList<Horse> horses;
 };

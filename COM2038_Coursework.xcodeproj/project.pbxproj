@@ -50,6 +50,7 @@
 		0ACF7EB81FE158C0001EDF11 /* Horses.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Horses.csv; path = COM2038_Coursework/Horses.csv; sourceTree = "<group>"; };
 		0ACF7EBA1FE158CF001EDF11 /* Dogs.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Dogs.csv; path = COM2038_Coursework/Dogs.csv; sourceTree = "<group>"; };
 		0ACF7EBC1FE158DC001EDF11 /* Cats.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Cats.csv; path = COM2038_Coursework/Cats.csv; sourceTree = "<group>"; };
+		0ACF7EBE1FE16AAD001EDF11 /* AnimalList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimalList.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +93,7 @@
 				0ACF7EB31FE00B20001EDF11 /* Horse.h */,
 				0ACF7EB41FE00D6C001EDF11 /* Parser.h */,
 				0ACF7EB51FE00E94001EDF11 /* parser.cpp */,
+				0ACF7EBE1FE16AAD001EDF11 /* AnimalList.h */,
 			);
 			path = COM2038_Coursework;
 			sourceTree = "<group>";

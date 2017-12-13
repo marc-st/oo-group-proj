@@ -6,6 +6,9 @@
 //  Copyright © 2017 Marc Stevens. All rights reserved.
 //
 
+#ifndef CAT_H
+#define CAT_H
+
 using namespace std;
 #include <string>
 #include "Animal.h"
@@ -22,6 +25,6 @@ public:
     :
     Animal(name, breed, colour, height), earType(earType), tailColour(tailColour),
     dad(dad), mom(mom) {}
-    ~Cat();
-    
 };
+
+#endif /* CAT_H */
