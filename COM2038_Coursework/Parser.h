@@ -6,13 +6,13 @@
 //  Copyright © 2017 Marc Stevens. All rights reserved.
 //
 
-using namespace std;
 #include <string>
+using namespace std;
 
 class Parser {
 public:
-    Parser();
-    ~Parser();
+    //Parser();
+    //~Parser();
     void readFile(string file);
 protected:
     // cat list

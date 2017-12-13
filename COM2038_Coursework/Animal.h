@@ -8,9 +8,14 @@
 using namespace std;
 #include <string>
 class Animal {
+public:
+    Animal(string name, string breed, string colour, string height)
+    :
+    name(name), breed(breed), colour(colour), height(height) {}
+    
 protected:
     string name;
     string breed;
     string colour;
-    int height;
+    string height;
 };

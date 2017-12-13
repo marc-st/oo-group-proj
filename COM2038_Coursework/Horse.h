@@ -16,7 +16,10 @@ protected:
     Horse* mom;
 public:
     Horse(string name, string breed, string colour, string height,
-        string earType, string tailColour, Horse* dad, Horse* mom){}
+          string earType, string tailColour, Horse* dad, Horse* mom)
+    :
+    Animal(name, breed, colour, height), earType(earType), tailColour(tailColour),
+    dad(dad), mom(mom) {}
     ~Horse();
     
 };

@@ -8,6 +8,8 @@
 
 using namespace std;
 #include <string>
+#include "Animal.h"
+
 class Cat : public Animal{
 protected:
     string earType;
@@ -16,7 +18,10 @@ protected:
     Cat* mom;
 public:
     Cat(string name, string breed, string colour, string height,
-        string earType, string tailColour, Cat* dad, Cat* mom){}
+        string earType, string tailColour, Cat* dad, Cat* mom)
+    :
+    Animal(name, breed, colour, height), earType(earType), tailColour(tailColour),
+    dad(dad), mom(mom) {}
     ~Cat();
     
 };

@@ -7,9 +7,21 @@
 //
 
 #include <iostream>
+#include "Parser.h"
 
 int main() {
     // insert code here...
     std::cout << "Hello, World!\n";
+    
+    Parser p; // initalise parser object
+    
+    // read the files into Parser
+    p.readFile("Dogs.csv");
+    //p.readFile("Cats.csv");
+    //p.readFile("Horse.csv");
+    
+    
+    
+    
     return 0;
 }

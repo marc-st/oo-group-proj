@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0ACF7EAA1FE00A89001EDF11 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF7EA91FE00A89001EDF11 /* main.cpp */; };
 		0ACF7EB61FE00E94001EDF11 /* parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF7EB51FE00E94001EDF11 /* parser.cpp */; };
+		0ACF7EB91FE158C1001EDF11 /* Horses.csv in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0ACF7EB81FE158C0001EDF11 /* Horses.csv */; };
+		0ACF7EBB1FE158CF001EDF11 /* Dogs.csv in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0ACF7EBA1FE158CF001EDF11 /* Dogs.csv */; };
+		0ACF7EBD1FE158DC001EDF11 /* Cats.csv in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0ACF7EBC1FE158DC001EDF11 /* Cats.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -21,6 +24,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		0ACF7EB71FE1586A001EDF11 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				0ACF7EBD1FE158DC001EDF11 /* Cats.csv in CopyFiles */,
+				0ACF7EBB1FE158CF001EDF11 /* Dogs.csv in CopyFiles */,
+				0ACF7EB91FE158C1001EDF11 /* Horses.csv in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +47,9 @@
 		0ACF7EB31FE00B20001EDF11 /* Horse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Horse.h; sourceTree = "<group>"; };
 		0ACF7EB41FE00D6C001EDF11 /* Parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
 		0ACF7EB51FE00E94001EDF11 /* parser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = parser.cpp; sourceTree = "<group>"; };
+		0ACF7EB81FE158C0001EDF11 /* Horses.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Horses.csv; path = COM2038_Coursework/Horses.csv; sourceTree = "<group>"; };
+		0ACF7EBA1FE158CF001EDF11 /* Dogs.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Dogs.csv; path = COM2038_Coursework/Dogs.csv; sourceTree = "<group>"; };
+		0ACF7EBC1FE158DC001EDF11 /* Cats.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Cats.csv; path = COM2038_Coursework/Cats.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +66,9 @@
 		0ACF7E9D1FE00A88001EDF11 = {
 			isa = PBXGroup;
 			children = (
+				0ACF7EBC1FE158DC001EDF11 /* Cats.csv */,
+				0ACF7EBA1FE158CF001EDF11 /* Dogs.csv */,
+				0ACF7EB81FE158C0001EDF11 /* Horses.csv */,
 				0ACF7EA81FE00A89001EDF11 /* COM2038_Coursework */,
 				0ACF7EA71FE00A89001EDF11 /* Products */,
 			);
@@ -85,6 +106,7 @@
 				0ACF7EA21FE00A88001EDF11 /* Sources */,
 				0ACF7EA31FE00A88001EDF11 /* Frameworks */,
 				0ACF7EA41FE00A88001EDF11 /* CopyFiles */,
+				0ACF7EB71FE1586A001EDF11 /* CopyFiles */,
 			);
 			buildRules = (
 			);
