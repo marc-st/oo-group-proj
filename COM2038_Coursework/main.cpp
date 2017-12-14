@@ -15,11 +15,8 @@ int main() {
     
     // read the files into Parser
     p.readFile("Dogs.csv");
-    p.readFile("Cats.csv");
-    p.readFile("Horses.csv");
-    
-    
-    
+    //p.readFile("Cats.csv");
+    //p.readFile("Horses.csv");
     
     return 0;
 }

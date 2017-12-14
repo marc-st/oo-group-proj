@@ -17,6 +17,7 @@ class AnimalList {
 public:
     void add(T toAdd);
     T* getParent(string name);
+    void printList();
 private:
     vector<T> myArray;
 };
@@ -36,5 +37,12 @@ T* AnimalList<T>::getParent(string name){
         }
     }
     return nullptr;
+}
+
+template<typename T>
+void AnimalList<T>::printList(){
+    for(unsigned i = 0; i < myArray.size(); i++) {
+        cout << myArray[i].name << endl;
+    }
 }
 

@@ -15,6 +15,7 @@
 #include <iostream>
 
 #include "Dog.h"
+#include "Cat.h"
 #include "Horse.h"
 
 //Parser::Parser(){}
@@ -53,8 +54,8 @@ void Parser::readFile(string filename){
                 Cat* mum = nullptr;
                 Cat* dad = nullptr;
                 
-                if(items.at(7) != "N/A") mum = cats.getParent(items.at(6));
-                if(items.at(8) != "N/A") dad = cats.getParent(items.at(7));
+                if(items.at(6) != "N/A") mum = cats.getParent(items.at(6));
+                if(items.at(7) != "N/A") dad = cats.getParent(items.at(7));
                     
                 Cat cat(items.at(0), items.at(1), items.at(2), items.at(3), items.at(4), items.at(5), mum, dad);
                 cats.add(cat);
@@ -82,10 +83,8 @@ void Parser::readFile(string filename){
                 horses.add(horse);
                 
             }else{
-                throw "Invalid File Name";
             }
-            
-            // add object to respective vector
         }
+        dogs.printList();
     }
 }
