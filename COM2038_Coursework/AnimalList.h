@@ -42,7 +42,10 @@ T* AnimalList<T>::getParent(string name){
 template<typename T>
 void AnimalList<T>::printList(){
     for(unsigned i = 0; i < myArray.size(); i++) {
-        cout << myArray[i].name << endl;
+        if(myArray[i].dad != nullptr){
+            cout << "test" << endl;
+            cout << (myArray[i].dad) << endl;
+        }
     }
 }
 

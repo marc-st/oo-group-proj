@@ -18,9 +18,9 @@ class Dog : public Animal{
 protected:
     string earType;
     string tailColour;
-    Dog* dad;
     Dog* mom;
 public:
+    Dog* dad;
     Dog(string name, string breed, string colour, string height,
         string earType, string tailColour, Dog* dad, Dog* mom)
     :
