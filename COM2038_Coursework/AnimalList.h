@@ -17,6 +17,7 @@ class AnimalList {
 public:
     void add(T toAdd);
     T* getParent(T animal, string name, bool mum, bool set);
+    void findParents(string name);
     void setParent();
     void printList();
 private:
@@ -67,6 +68,22 @@ template<typename T>
 void AnimalList<T>::printList(){
     for(unsigned i = 0; i < myArray.size(); i++) {
         cout << myArray[i].print() << endl;
+    }
+}
+
+template<typename T>
+void AnimalList<T>::findParents(string name){
+    
+    cout << name << " ->";
+    
+    for(unsigned i = 0; i < myArray.size(); i++){
+        if(myArray[i].name == name){
+            if(myArray[i].getDad() != nullptr){
+                findParents((myArray[i].getDad()) -> name);
+                cout << "[END]" << endl;
+                return;
+            }
+        }
     }
 }
 

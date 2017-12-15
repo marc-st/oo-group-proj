@@ -38,7 +38,7 @@ public:
         if(dad != nullptr) dadName = (*dad).name;
         if(mom != nullptr) momName = (*mom).name;
         
-        return name + "  " + "Dog" + "  " + breed + "  " + colour + "  " + height + "  " + earType
+        return name + "  " + "Horse" + "  " + breed + "  " + colour + "  " + height + "  " + earType
         + "  " + tailColour + "  " + dadName + "  " + momName;
     }
 };

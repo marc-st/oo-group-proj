@@ -104,3 +104,9 @@ void Parser::readFile(string filename){
         }
     }
 }
+
+void Parser::getTree(string name){
+    if(name.substr(0, 1) == "d") dogs.findParents(name.substr(2, name.length() - 1));
+    if(name.substr(0, 1) == "c") cats.findParents(name.substr(2, name.length() - 1));
+    if(name.substr(0, 1) == "h") horses.findParents(name.substr(2, name.length() - 1));
+}

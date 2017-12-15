@@ -19,6 +19,7 @@ public:
     //Parser();
     //~Parser();
     void readFile(string file);
+    void getTree(string name);
 protected:
     AnimalList<Dog> dogs;
     AnimalList<Cat> cats;

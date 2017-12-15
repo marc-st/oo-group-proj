@@ -18,5 +18,9 @@ int main() {
     p.readFile("Cats.csv");
     p.readFile("Horses.csv");
     
+    std::string response;
+    std::getline(std::cin , response);
+    p.getTree(response);
+    
     return 0;
 }
