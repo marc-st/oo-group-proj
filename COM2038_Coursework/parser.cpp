@@ -33,6 +33,8 @@ void Parser::readFile(string filename){
         
         string str;
         
+        string animalType = filename.substr(0, filename.length()-4);
+        
         while(!infile.eof()){
             
             infile >> str;
@@ -47,17 +49,16 @@ void Parser::readFile(string filename){
                 if(!(item.empty())) items.at(index++) = item;
             }
             
-            string animalType = filename.substr(0, filename.length()-4);
-            
             if(animalType == "Cats"){
                 
                 Cat* mum = nullptr;
                 Cat* dad = nullptr;
                 
-                if(items.at(6) != "N/A") dad = cats.getParent(items.at(6));
-                if(items.at(7) != "N/A") mum = cats.getParent(items.at(7));
-                    
-                Cat cat(items.at(0), items.at(1), items.at(2), items.at(3), items.at(4), items.at(5), dad, mum);
+                Cat cat(items.at(1), items.at(0), items.at(2), items.at(4), items.at(3), items.at(5), dad, mum);
+                
+                if(items.at(6) != "N/A") cats.getParent(cat, items.at(6), false, false);
+                if(items.at(7) != "N/A") cats.getParent(cat, items.at(7), true, false);
+                
                 cats.add(cat);
                 
             }else if(animalType == "Dogs"){
@@ -65,10 +66,11 @@ void Parser::readFile(string filename){
                 Dog* mum = nullptr;
                 Dog* dad = nullptr;
                 
-                if(items.at(6) != "N/A") dad = dogs.getParent(items.at(6));
-                //if(items.at(7) != "N/A") mum = dogs.getParent(items.at(6));
-                
                 Dog dog(items.at(1), items.at(0), items.at(2), items.at(4), items.at(3), items.at(5), dad, mum);
+                
+                if(items.at(6) != "N/A") dogs.getParent(dog, items.at(6), false, false);
+                if(items.at(7) != "N/A") dogs.getParent(dog, items.at(7), true, false);
+                
                 dogs.add(dog);
                 
             }else if(animalType == "Horses"){
@@ -76,15 +78,29 @@ void Parser::readFile(string filename){
                 Horse* mum = nullptr;
                 Horse* dad = nullptr;
                 
-                if(items.at(7) != "N/A") dad = horses.getParent(items.at(7));
-                if(items.at(6) != "N/A") mum = horses.getParent(items.at(6));
+                Horse horse(items.at(1), items.at(0), items.at(2), items.at(4), items.at(3), items.at(5), dad, mum);
                 
-                Horse horse(items.at(0), items.at(1), items.at(2), items.at(3), items.at(4), items.at(5), dad, mum);
+                if(items.at(6) != "N/A") dad = horses.getParent(horse, items.at(6), false, false);
+                if(items.at(7) != "N/A") mum = horses.getParent(horse, items.at(7), true, false);
+                
                 horses.add(horse);
                 
             }else{
             }
         }
-        dogs.printList();
+        if(animalType == "Dogs"){
+            dogs.setParent();
+            dogs.printList();
+            cout << "End of Dogs" << endl;
+        }
+        if(animalType == "Cats"){
+            cats.setParent();
+            cats.printList();
+            cout << "End of Cats" << endl;
+        }
+        if(animalType == "Horses"){
+            horses.setParent();
+            horses.printList();
+        }
     }
 }

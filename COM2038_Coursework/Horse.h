@@ -24,6 +24,22 @@ public:
           string earType, string tailColour, Horse* dad, Horse* mom)
     :
     Animal(name, breed, colour, height), earType(earType), tailColour(tailColour),
-    dad(dad), mom(mom) {}    
+    dad(dad), mom(mom) {}
+    
+    void setDad(Horse *horse) { dad = horse; }
+    Horse* getDad() { return dad; }
+    
+    void setMum(Horse *horse) { mom = horse; }
+    
+    string print(){
+        
+        string dadName = "N/A"; string momName = "N/A";
+        
+        if(dad != nullptr) dadName = (*dad).name;
+        if(mom != nullptr) momName = (*mom).name;
+        
+        return name + "  " + "Dog" + "  " + breed + "  " + colour + "  " + height + "  " + earType
+        + "  " + tailColour + "  " + dadName + "  " + momName;
+    }
 };
 #endif /* HORSE_H */
